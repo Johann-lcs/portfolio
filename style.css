@@ -9,6 +9,12 @@ body {
     padding: 20px;
 }
 
+#terminal-content p {
+    white-space: pre-line;
+    margin: 0;
+    line-height: 1.5;
+}
+
 .input-line {
     display: flex;
     align-items: center;
@@ -31,4 +37,15 @@ input {
 .command {
     color: #00ffaa;
 }
+
+input::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
 

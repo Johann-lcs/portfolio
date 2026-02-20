@@ -1,11 +1,92 @@
 // Textes pour chaque commande
 const commandOutputs = {
-    about: "Je m'appelle Johann, étudiant en BTS SIO 1ère année, passionné par le développement et la cybersécurité.",
-    skills: "- HTML / CSS / JS\n- Linux / Terminal\n- Git / GitHub\n- Réseaux et CTF",
-    projects: "- Portfolio interactif terminal\n- Projet CTF\n- Stage Hello My Soft",
-    experience: "- Stage chez Hello My Soft\n- Petits projets perso",
-    education: "- BTS SIO 1ère année (Rennes)\n- Formation complémentaire en cybersécurité",
-    contact: "📧 Email : johann@example.com\n🔗 GitHub : https://github.com/johann-lcs\n🔗 LinkedIn : https://linkedin.com/in/johann-lcs"
+
+    about: [
+        " Johann LUCAS — Étudiant en 2ème année de BTS SIO (option SLAM)",
+        " Rennes, France",
+        "",
+        "Passionné par le développement web et la cybersécurité.",
+        "Je conçois des projets orientés pratique : applications web, environnement Linux, CTF et sécurisation.",
+        "",
+        " Objectif : devenir avant tout un développeur fullstack puis un développeur orienté sécurité / DevSecOps."
+    ],
+
+    skills: [
+        " Développement :",
+        "- HTML5 / CSS3",
+        "- JavaScript (DOM, logique front-end)",
+        "- PHP",
+        "- C#",
+        "- Java",
+        "",
+        " Systèmes & Réseaux :",
+        "- Linux (Debian, ligne de commande)",
+        "- Configuration FTP / Apache",
+        "- Bases en réseaux (TCP/IP, DNS, HTTP)",
+        "",
+        " Cybersécurité :",
+        "- Participation à des CTF",
+        "- Analyse de vulnérabilités simples",
+        "- Sensibilisation aux bonnes pratiques (OWASP)",
+        "",
+        " Outils :",
+        "- Git / GitHub",
+        "- VS Code",
+        "- VirtualBox",
+        "- FileZilla"
+    ],
+
+    projects: [
+        " Portfolio Terminal Interactif",
+        "→ Site développé en HTML/CSS/JS simulant un terminal Linux",
+        "→ Gestion d’historique de commandes",
+        "→ Effet machine à écrire en JavaScript",
+        "",
+        " Portfolio classique",
+        "→ Site développé en HTML/CSS/JS",
+        "→ Meilleur rendu si aucune connaissance en Linux",
+        "",
+        " Projets académiques BTS",
+        "→ Mini applications web dynamiques",
+        "→ Manipulation BDD (bases SQL)"
+    ],
+
+    experience: [
+        " Stage - Skyld (Ille-et-Vilaine)",
+        "→ Participation à des tâches techniques",
+        "→ Tâches principal: Référecnement SEO, LLMs, refonte du site web",
+        "",
+        " Stage - Hello My Soft (Ille-et-Vilaine)",
+        "→ Découverte environnement professionnel",
+        "→ Participation à des tâches techniques",
+        "→ Compréhension cycle de développement",
+        "",
+        " Projets personnels",
+        "→ Entraînement régulier en développement",
+        "→ Résolution de challenges cybersécurité"
+    ],
+
+    education: [
+        " BTS SIO (Services Informatiques aux Organisations)",
+        "Option SLAM — Solutions Logicielles et Applications Métiers",
+        "Rennes",
+        "",
+        " BAC STI2D (Sciences et Technologies de l'Industrie et du Développement Durable)",
+        "Option SIN - Systèmes d'Information et Numérique",
+        "Cesson-sévigné",
+        "",
+        " Formation complémentaire personnelle :",
+        "- Cybersécurité (CTF, Linux)",
+        "- Auto-formation langage de programmation (OpenClassRoom...)"
+    ],
+
+    contact: [
+        " Email : johann@example.com",
+        " GitHub : https://github.com/johann-lcs",
+        " LinkedIn : https://linkedin.com/in/johann-lcs",
+        "",
+        "Disponible pour stage / alternance."
+    ]
 };
 
 // Historique des commandes
@@ -14,13 +95,14 @@ let historyIndex = -1;
 
 // Récupération des éléments HTML
 const input = document.getElementById("command-input");
+const terminalContent = document.getElementById("terminal-content");
 const output = document.getElementById("output");
 
 // Focus initial
 input.focus();
 
 // Écoute des touches
-input.addEventListener("keydown", function(event) {
+input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
 
@@ -34,10 +116,10 @@ input.addEventListener("keydown", function(event) {
         // Afficher la commande dans le terminal
         const commandLine = document.createElement("p");
         commandLine.innerHTML = `<span class="prompt">johann@portfolio:~$</span> ${command}`;
-        output.appendChild(commandLine);
+        terminalContent.appendChild(commandLine);
 
         // Traiter la commande
-        handleCommand(command.toLowerCase());
+        handleCommand(command.toLowerCase(), terminalContent);
 
         // Réinitialiser l'input et scroll
         input.value = "";
@@ -65,7 +147,7 @@ input.addEventListener("keydown", function(event) {
 });
 
 // Fonction pour traiter les commandes
-function handleCommand(cmd) {
+function handleCommand(cmd, container) {
     const line = document.createElement("p");
 
     if (cmd === "help") {
@@ -79,15 +161,25 @@ function handleCommand(cmd) {
         <span class="command">contact</span><br>
         <span class="command">clear</span>
         `;
-        output.appendChild(line);
+        container.appendChild(line);
     } else if (cmd === "clear") {
-        output.innerHTML = "";
+        // Supprime uniquement le contenu du terminal, pas le logo
+        container.innerHTML = "";
     } else if (commandOutputs[cmd]) {
-        output.appendChild(line);
-        typeWriter(line, commandOutputs[cmd].replace(/\n/g, "<br>"));
-    } else {
+        // Si c'est un tableau, on le garde tel quel
+        let lines = commandOutputs[cmd];
+
+        // Sinon si c'est une chaîne avec \n, on split
+        if (!Array.isArray(lines)) {
+            lines = commandOutputs[cmd].split("\n");
+        }
+
+        // Afficher chaque ligne avec un délai entre elles
+        typeWriterLines(container, lines);
+    }
+    else {
         line.textContent = `Commande inconnue : ${cmd} (tape "help")`;
-        output.appendChild(line);
+        container.appendChild(line);
     }
 
     input.focus();
@@ -104,4 +196,31 @@ function typeWriter(element, text, speed = 7) {
         output.scrollTop = output.scrollHeight;
         if (i >= text.length) clearInterval(interval);
     }, speed);
+}
+
+function typeWriterLines(container, lines, lineSpeed = 1, delayBetweenLines = 10) {
+    let i = 0;
+
+    function writeLine() {
+        if (i >= lines.length) return;
+
+        const p = document.createElement("p");
+        container.appendChild(p);
+
+        const text = lines[i];
+        let j = 0;
+
+        const interval = setInterval(() => {
+            p.innerHTML += text.charAt(j);
+            j++;
+            container.scrollTop = container.scrollHeight; // scroll auto
+            if (j >= text.length) {
+                clearInterval(interval);
+                i++;
+                setTimeout(writeLine, delayBetweenLines); // délai avant la ligne suivante
+            }
+        }, lineSpeed);
+    }
+
+    writeLine();
 }
