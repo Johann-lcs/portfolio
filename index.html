@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Portfolio - Johann LUCAS</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="images/Logo_menu.png" alt="Logo Menu" class="logoMenu" />
+            JohannDev
+        </h1>
+        <nav>
+            <ul>
+                <li>Accueil</li>
+                <li>A propos</li>
+                <li>Projet</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- page Accueil -->
+    <section class="accueil">
+        <div class="texte">
+            <h2>
+                Étudiant <br>
+                développement web et applicatif <br>
+            </h2>
+            <p>Je m'appelle Johann LUCAS. <br>
+                Actuellement, je suis en 2ème année de BTS SIO, <br>
+                je souhaite poursuivre mon apprentissage dans le développement web</p> <br>
+            <button>Voir mes projets</button>
+        </div>
+        <div class="logoMain">
+            <div>
+                <img src="images/Logo_main.png" alt="Logo Principal" class="logoMain" />
+            </div>
+        </div>
+    </section>
+  
+    <!-- Mes compétences -->
+    <section class="skills">
+        <h2>Mes Compétences</h2>
+
+        <div class="skills-category">
+            <h3>Développement & Web</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4>HTML / CSS</h4>
+                    <p>Intégration de maquettes, structuration sémantique et création d’interfaces responsive.</p>
+                </div>
+                <div class="card">
+                    <h4>JavaScript</h4>
+                    <p>Manipulation du DOM, gestion d’événements et interactions dynamiques côté client.</p>
+                </div>
+                <div class="card">
+                    <h4>PHP</h4>
+                    <p>Notions de base : traitement de formulaires, connexion à une base de données (PDO/MySQL).</p>
+                </div>
+                <div class="card">
+                    <h4>SQL / Bases de données</h4>
+                    <p>Création de tables, requêtes SELECT/INSERT/UPDATE et modélisation simple (MERISE).</p>
+                </div>
+                <div class="card">
+                    <h4>WordPress</h4>
+                    <p>Installation, configuration, personnalisation de thèmes et gestion de contenu.</p>
+                </div>
+                <div class="card">
+                    <h4>Responsive Design</h4>
+                    <p>Utilisation de Flexbox et Grid pour adapter les interfaces aux différents écrans.</p>
+                </div>
+                <div class="card">
+                    <h4>Référencement SEO</h4>
+                    <p>Optimisation HTML sémantique, balises meta, structure Hn et bonnes pratiques pour améliorer la
+                        visibilité d’un site.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="skills-category">
+            <h3>Systèmes, Réseaux & Cyber</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4>Debian</h4>
+                    <p>Administration système et environnement Linux.</p>
+                </div>
+                <div class="card">
+                    <h4>FTP</h4>
+                    <p>Configuration FileZilla Server & Client + analyse d’attaque.</p>
+                </div>
+                <div class="card">
+                    <h4>CTF</h4>
+                    <p>Résolution de défis cyber et recherche de failles.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3>Outils & Gestion</h3>
+            <div class="cards">
+                <div class="card">
+                    <h4>Git</h4>
+                    <p>Versionnage et gestion de projets</p>
+                </div>
+                <div class="card">
+                    <h4>PrestaShop</h4>
+                    <p>Mises à jour, configuration, refonte des pages.</p>
+                </div>
+                <div class="card">
+                    <h4>Outils de Développement</h4>
+                    <p>VS Code, Node.js, extensions de développement web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Structure HTML de la section type "journal" -->
+    <section class="apropos-section">
+        <!-- Image visage centrée -->
+        <div class="portrait-container">
+            <img src="images/visage.png" alt="photo" class="portrait" />
+        </div>
+
+
+        <!-- Zone avec fond couleur -->
+        <div class="background-block">
+            <div class="content-columns">
+                <!-- Colonne gauche -->
+                <div class="column-left">
+                    <p>
+                        Passionné par l’informatique depuis plusieurs années, j’ai orienté mon parcours dès le lycée
+                        vers le domaine du numérique en obtenant un BAC STI2D option SIN. Cette formation m’a permis de
+                        découvrir les fondamentaux des systèmes informatiques, des réseaux et des technologies
+                        embarquées, et a confirmé mon envie de poursuivre dans cette voie.
+                        <br /><br />
+                        Après le bac, j’ai choisi de rejoindre un BTS SIO (Services Informatiques aux Organisations)
+                        afin de développer des compétences plus concrètes et professionnelles.
+                    </p>
+                </div>
+
+
+                <!-- Colonne droite -->
+                <div class="column-right">
+                    <p>
+                        Aujourd’hui en première année, j’explore différents domaines : le développement,
+                        l’administration réseau et la cybersécurité, à travers des projets pratiques et des mises en
+                        situation réelles.
+                        <br /><br />
+                        J’ai également effectué un stage au sein de l’entreprise Hello My Soft, où j’ai renforcé mon
+                        autonomie et ma vision du milieu professionnel.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Compétences techniques sous forme de cartes -->
+            <div class="skills-carousel">
+                <button class="carousel-btn prev">&#10094;</button>
+
+                <div class="carousel-track">
+                    <div class="skill-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                        <h3>HTML5</h3>
+                    </div>
+
+                    <div class="skill-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                        <h3>CSS3</h3>
+                    </div>
+
+                    <div class="skill-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                        <h3>JavaScript</h3>
+                    </div>
+
+                    <div class="skill-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+                        <h3>PHP</h3>
+                    </div>
+
+                    <div class="skill-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg">
+                        <h3>Debian</h3>
+                    </div>
+
+                    <div class="skill-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg">
+                        <h3>WordPress</h3>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+    </section>
+    </section>
+    <section>
+        <!-- Compétences détaillées
+                Liste ou tableau de mes compétences techniques + niveau
+                Icônes pour un rendu visuel -->
+    </section>
+
+    <section>
+        <!-- Centres d’intérêt -->
+    </section>
+    </section>
+
+
+
+
+
+    <!-- page Projets -->
+    <section class="projet">
+        <!-- Projet -->
+    </section>
+
+
+
+    <!-- page Contact -->
+    <section class="contact">
+        <!-- Formulaire de contact -->
+    </section>
+    <section>
+        <!-- informaitions directes (instagram, linkedin, email, téléphone, GitHub...) -->
+    </section>
+
+
+
+    <!-- footer -->
+    <section>
+        <!-- développement du footer
+         
+         liste des pages (Accueil, A propos, ...)
+
+         réseaux sociaux
+         adresse mail, numéro de téléphone
+
+         plage horaire (ouverture, fermeture)
+
+         copyright -->
+    </section>
+</body>
+
+</html>
