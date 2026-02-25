@@ -1,0 +1,571 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding-top: 100px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:  #f4f1eb;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+header.scrolled {
+    padding: 10px 60px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #be4e4e;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+li:hover {
+    color: #be4e4e;
+}
+
+
+
+/* Page Accueil */
+
+hr {
+    width:"100%";
+    size:"3";
+    color:"black";
+    background-size: 100%;
+    background-color: #f4f1eb;
+}
+
+section {
+    text-align: center;
+    background-color: white;
+}
+
+section.accueil {
+    background-color: #f4f1eb;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-indent: 0;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #001528;
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #be4e4e;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoMenu {
+    width: 100px;
+    height: auto;
+    margin-left: 80px;
+}
+
+.logoMain {
+    width: 500px;
+    height: auto;
+
+}
+
+.accueil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 150px;
+    background-color: #f2f2f2;
+    gap: 40px;
+    color: #001528;
+}
+
+.accueil .texte {
+    flex: 0 0 55%;
+}
+
+.accueil .logoMain {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.accueil .logoMain img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #333;
+    display: block;
+    margin: auto;
+}
+
+
+/* Mes compétences */
+.skills {
+    
+    background-color:  #f4f1eb;
+    padding: 60px 0;
+    color: #001528;
+ 
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.skills-category {
+    margin-bottom: 50px;
+}
+
+.skills-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #001528;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 400px;
+}
+
+.card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+
+
+/* Page A propos */
+.apropos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Portrait centré */
+.portrait-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -50px;
+    z-index: 10;
+    position: relative;
+}
+
+
+.portrait {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+
+/* Bloc coloré */
+.background-block {
+    width: 80%;
+    background-color: #f4f1eb;
+    padding: 80px 30px 40px;
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+
+/* Deux colonnes de texte */
+.content-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+
+.column-left, .column-right {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* Cartes compétences */
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+.skill-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    button {
+        width: 80%;
+        padding: 12px 0;
+    }
+}
+
+
+
+
+.skills-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: none;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  white-space: nowrap;
+  animation: slide 7s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.skill-slide {
+  display: inline-block;
+  min-width: 150px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.skill-slide img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+
+
+/* =================== SECTION PROJETS =================== */
+.projet {
+  background-color: #f4f1eb;
+  padding: 80px 300px;
+  text-align: center;
+  color: #001528;
+}
+
+.projet h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
+/* Conteneur des cartes */
+.project-cards {
+  display: flex;             
+  flex-wrap: wrap;           
+  justify-content: center;   
+  gap: 50px;
+  margin: 0 auto;
+}
+
+/* Carte projet */
+.project-card {
+  flex: 0 0 320px;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Titre avec lien */
+.project-card h3 a {
+  text-decoration: none;
+  color: #001528;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.project-card h3 a:hover {
+  color: #be4e4e;
+}
+
+/* Liste des détails */
+.project-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.project-card li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* espace réduit sur mobile */
+  }
+
+  .project-card {
+    width: 85%;
+    flex: none;
+  }
+}
+
+
+/* FOOTER */
+.footer-clean {
+    padding: 60px 0;
+    background-color: #001528;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container principal du footer */
+.footer-clean .footer-container {
+    display: flex;
+    justify-content: space-between;  /* trois colonnes alignées horizontalement */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* Bloc commun */
+.footer-clean .footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;                /* chaque colonne prend la même largeur */
+    min-width: 180px;
+    text-align: center;
+}
+
+/* Titres */
+.footer-clean h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Paragraphes */
+.footer-clean p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Listes et liens verticaux */
+.footer-clean ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;            /* important pour que les liens prennent toute la largeur */
+}
+
+.footer-clean ul li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.footer-clean ul li a {
+    display: block;         /* lien sur une ligne */
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-clean ul li a:hover {
+    opacity: 1;
+    color: #be4e4e;
+}
+
+/* Copyright centré */
+.footer-clean .footer-block.about .copyright {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-clean .footer-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;           /* on force flex */
+    flex-direction: column;  /* verticale */
+    align-items: center;     /* centrer horizontalement chaque lien */
+    gap: 8px;                /* espace entre les liens */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-clean .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-clean .footer-block {
+        max-width: 400px;
+    }
+}
