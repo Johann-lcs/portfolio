@@ -4,7 +4,7 @@ const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
 let currentIndex = 0;
-const slideWidth = slides[0].offsetWidth + 40; // largeur + gap
+const slideWidth = slides[0].offsetWidth + 40;
 
 nextBtn.addEventListener('click', () => {
     currentIndex++;

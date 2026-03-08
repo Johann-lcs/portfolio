@@ -1,0 +1,273 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1eb;
+}
+
+body a {
+    text-decoration: none;
+    color: #001528;
+}
+
+.body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding-top: 100px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f1eb;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+header.scrolled {
+    padding: 10px 60px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #be4e4e;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+header .li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .li:hover {
+    color: #be4e4e;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoMenu {
+    width: 100px;
+    height: auto;
+    margin-left: 80px;
+}
+
+/* CONTAINER */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* EXPERIENCE CARD */
+
+.experience-detail {
+    position: relative;
+    background: white;
+    padding: 35px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.experience-detail:hover {
+    transform: translateY(-5px);
+}
+
+/* TITRES */
+
+.experience-detail h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.experience-detail h3 {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #be4e4e;
+}
+
+/* INFOS */
+
+.experience-info {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* LISTES */
+
+.experience-detail ul {
+    padding-left: 20px;
+}
+
+.experience-detail li {
+    margin-bottom: 8px;
+}
+
+/* TIMELINE */
+
+.experience-detail::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 35px;
+    width: 12px;
+    height: 12px;
+    background: #be4e4e;
+    border-radius: 50%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 15px;
+    }
+
+    .experience-detail {
+        padding: 25px;
+    }
+
+}
+
+
+/* FOOTER */
+.footer-clean {
+    padding: 60px 0;
+    background-color: #001528;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container principal du footer */
+.footer-clean .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* Bloc commun */
+.footer-clean .footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* Titres */
+.footer-clean h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Paragraphes */
+.footer-clean p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Listes et liens verticaux */
+.footer-clean ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.footer-clean ul li {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.footer-clean ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-clean ul li a:hover {
+    opacity: 1;
+    color: #be4e4e;
+}
+
+/* Copyright centré */
+.footer-clean .footer-block.about .copyright {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-clean .footer-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-clean .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-clean .footer-block {
+        max-width: 400px;
+    }
+}
