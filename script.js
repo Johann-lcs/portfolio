@@ -28,3 +28,10 @@ window.addEventListener("scroll", function () {
     }
 });
 
+const slide = document.querySelector(".skill-slide");
+
+if (slide) {
+    const copy = slide.cloneNode(true);
+    document.querySelector(".icons").appendChild(copy);
+}
+

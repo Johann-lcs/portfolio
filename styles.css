@@ -53,6 +53,10 @@ nav a:hover {
     color: #be4e4e;
 }
 
+nav ul {
+    padding: 100px;
+}
+
 ul {
     list-style: none;
     display: flex;

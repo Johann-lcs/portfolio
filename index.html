@@ -4,21 +4,24 @@
 <head>
     <title>Portfolio - Johann LUCAS</title>
     <meta charset="utf-8" />
+    <meta name="description"
+        content="Portfolio de Johann Lucas, étudiant en BTS SIO spécialisé en développement web et cybersécurité.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <a href="index.html">
+    <a href="index.html" data-aos="fade-down" data-aos-delay="300">
         <header>
             <h1>
                 <img src="images/Logo_menu.png" alt="Logo Menu" class="logoMenu" />
                 JohannDev
             </h1>
-            <nav>
+            <nav data-aos="fade-down" data-aos-delay="300">
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#apropos">A propos</a></li>
@@ -30,10 +33,9 @@
         </header>
     </a>
 
-
     <!-- page Accueil -->
     <section id="accueil" class="accueil">
-        <div class="texte">
+        <div class="texte" data-aos="fade-zoom-in" data-aos-delay="600">
             <h2>
                 Étudiant <br>
                 développement web et applicatif <br>
@@ -43,7 +45,7 @@
                 je souhaite poursuivre mon apprentissage dans le développement web</p> <br>
             <button><a href="#projet">Voir mes projets</a></button>
         </div>
-        <div class="logoMain">
+        <div class="logoMain" data-aos="fade-zoom-in" data-aos-delay="600">
             <div>
                 <img src="images/Logo_main.png" alt="Logo Principal" class="logoMain" />
             </div>
@@ -54,7 +56,7 @@
     <section id="skills" class="skills">
         <h2>Mes Compétences</h2>
 
-        <div class="skills-category">
+        <div class="skills-category" data-aos="fade-up">
             <h3>Développement & Web</h3>
             <div class="cards">
                 <div class="card" data-transition="flip">
@@ -325,10 +327,7 @@
                             <h3>VS Code</h3>
                         </div>
 
-                        <script>
-                            var copy = document.querySelector(".skill-slide").cloneNode(true);
-                            document.querySelector(".icons").appendChild(copy);
-                        </script>
+
                     </div>
                 </div>
             </div>
@@ -503,6 +502,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
