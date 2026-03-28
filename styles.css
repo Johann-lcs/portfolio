@@ -126,6 +126,11 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.logo {
+    padding: 20px;
+    padding-right: 50px;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -145,7 +150,6 @@ h1 {
 .logoMain {
     width: 500px;
     height: auto;
-
 }
 
 .accueil {
@@ -464,6 +468,7 @@ h1 {
     flex: 0 0 320px;
     background: #ffffff;
     padding: 25px 20px;
+    margin: 20px;
     border-radius: 20px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     text-align: left;
