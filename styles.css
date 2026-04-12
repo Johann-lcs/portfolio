@@ -31,7 +31,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 30px;
     background-color: #f4f1eb;
     transition: all 0.3s ease;
     color: #333;
@@ -671,7 +671,7 @@ h1 {
     display: flex;
     flex-direction: column;
 
-    height: 180px;
+    flex-grow: 1;
 }
 
 .experience-content h3 {
@@ -691,6 +691,7 @@ h1 {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    height: 300px;
 }
 
 .experience-bottom a {
@@ -754,9 +755,7 @@ h1 {
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
-}
+
 
 /* Burger — invisible sur desktop */
 .burger {
